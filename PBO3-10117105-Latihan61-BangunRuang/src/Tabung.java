@@ -28,8 +28,9 @@ public class Tabung extends BangunRuang {
         this.h = h;
     }
     
+    @Override
     public double hitungVolume() {
-        this.volume = 3.14 * r * r * h;
+        this.volume = Math.PI * Math.pow(r, 2) * h;
         return this.volume;
     }
 }

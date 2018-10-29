@@ -7,23 +7,21 @@
  * @author RIA FITRIANI
  */
 public class Main {
-     public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) {
         Bola b = new Bola();
         Tabung t = new Tabung();
         Kerucut k = new Kerucut();
         
         b.setR(7);
-        System.out.println("Volume Bola : " + b.hitungVolume());
+        System.out.println("Volume Bola : " + Math.ceil(b.hitungVolume()));
         
         t.setH(21);
         t.setR(10);
-        System.out.println("Volume Tabung : " + t.hitungVolume());
+        System.out.println("Volume Tabung : " + Math.ceil(t.hitungVolume()));
         
         k.setR(14);
-        k.setT(9);
-        k.hitungSisiSelimut();
-        System.out.println("Volume Kerucut : " + k.hitungVolume());
+        k.setH(9);
+        System.out.println("Volume Kerucut : " + Math.ceil(k.hitungVolume()));
     }
     
     

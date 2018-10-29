@@ -8,9 +8,9 @@
  * @author RIA FITRIANI
  */
 public class Kerucut extends BangunRuang {
-    private double r;
-    private double t;
-    private double s;
+   private double r;
+    private double h;
+
     private double volume;
 
     public double getR() {
@@ -21,21 +21,17 @@ public class Kerucut extends BangunRuang {
         this.r = r;
     }
 
-    public double getT() {
-        return t;
+    public double getH() {
+        return h;
     }
 
-    public void setT(double t) {
-        this.t = t;
+    public void setH(double h) {
+        this.h = h;
     }
     
-    public double hitungSisiSelimut() {
-        this.s = Math.sqrt((r*r)+(t*t));
-        return this.s;
-    }
-    
+    @Override
     public double hitungVolume() {
-        this.volume = (1 * 3.14 * r * r * t) / 3;
+        this.volume = (1 * Math.PI * Math.pow(r, 2) * h)/3;
         return this.volume;
     }
 }
